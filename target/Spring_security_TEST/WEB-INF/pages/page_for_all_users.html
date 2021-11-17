@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<html>
+<head>
+
+<h3> Info for all users</h3>
+    <br><br>
+
+    <security:authorize access="hasRole('ADMIN')">
+    <input type="button" value="Salary"
+           onclick="window.location.href = 'admin_info'">
+    Only for ADMIN staff
+    </security:authorize>
+
+    <br><br>
+
+    <security:authorize access="hasRole('SE')">
+    <input type="button" value="Performance"
+           onclick="window.location.href = 'se_info'">
+    Only for SE staff
+    </security:authorize>
+
+</head>
+<body>
+
+</body>
+</html>
